@@ -51,7 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BookRepository.cs" />
     <Compile Include="Data\DatabaseInitializer.cs" />
+    <Compile Include="Entities\Book.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

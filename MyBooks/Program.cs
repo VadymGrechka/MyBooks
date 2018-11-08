@@ -18,7 +18,7 @@ namespace MyBooks
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             DatabaseInitializer.CreateDb();
-            Application.Run(new mainForm());
+            Application.Run(new MainForm());
         }
     }
 }
