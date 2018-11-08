@@ -32,9 +32,8 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.addBookButton = new System.Windows.Forms.Button();
-            this.addCategory = new System.Windows.Forms.Button();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addBookButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // booksListView
@@ -46,9 +45,9 @@
             this.columnHeader4});
             this.booksListView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.booksListView.FullRowSelect = true;
-            this.booksListView.Location = new System.Drawing.Point(0, 278);
+            this.booksListView.Location = new System.Drawing.Point(0, 272);
             this.booksListView.Name = "booksListView";
-            this.booksListView.Size = new System.Drawing.Size(800, 172);
+            this.booksListView.Size = new System.Drawing.Size(800, 178);
             this.booksListView.TabIndex = 0;
             this.booksListView.UseCompatibleStateImageBehavior = false;
             this.booksListView.View = System.Windows.Forms.View.Details;
@@ -68,6 +67,10 @@
             this.columnHeader3.Text = "Описание";
             this.columnHeader3.Width = 155;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Дата";
+            // 
             // addBookButton
             // 
             this.addBookButton.Location = new System.Drawing.Point(30, 133);
@@ -76,26 +79,13 @@
             this.addBookButton.TabIndex = 1;
             this.addBookButton.Text = "Добавить книгу";
             this.addBookButton.UseVisualStyleBackColor = true;
-            // 
-            // addCategory
-            // 
-            this.addCategory.Location = new System.Drawing.Point(213, 133);
-            this.addCategory.Name = "addCategory";
-            this.addCategory.Size = new System.Drawing.Size(133, 46);
-            this.addCategory.TabIndex = 1;
-            this.addCategory.Text = "Добавить категорию";
-            this.addCategory.UseVisualStyleBackColor = true;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Дата";
+            this.addBookButton.Click += new System.EventHandler(this.addBookButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.addCategory);
             this.Controls.Add(this.addBookButton);
             this.Controls.Add(this.booksListView);
             this.Name = "MainForm";
@@ -111,7 +101,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button addBookButton;
-        private System.Windows.Forms.Button addCategory;
         private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

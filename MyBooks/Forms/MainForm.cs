@@ -1,5 +1,6 @@
 ﻿using MyBooks.Data;
 using MyBooks.Entities;
+using MyBooks.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,12 @@ namespace MyBooks
                 viewItem.SubItems.Add(item.DateCreated.ToShortDateString());
                 viewItem.Tag = item.Id;
             }
+        }
+
+        private void addBookButton_Click(object sender, EventArgs e)
+        {
+            AddForm addBookForm = new AddForm();
+            addBookForm.Show();
         }
     }
 }
