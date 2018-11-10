@@ -20,12 +20,13 @@ namespace MyBooks
         public MainForm()
         {
             InitializeComponent();
-            var books = bookRepository.GetAll();
-            DrawBooks(books);
+            GetAndDrawBooks();
         }
 
         private void DrawBooks(IEnumerable<Book> books)
         {
+            booksListView.Items.Clear();
+
             foreach (var item in books)
             {
                 var viewItem = booksListView.Items.Add(item.Name);
@@ -38,9 +39,16 @@ namespace MyBooks
 
         private void addBookButton_Click(object sender, EventArgs e)
         {
-            AddForm addBookForm = new AddForm();
-            addBookForm.Show();
+            DetailsForm addBookForm = new DetailsForm();
+            if (addBookForm.ShowDialog() == DialogResult.OK)
+               GetAndDrawBooks();
         }
        
+
+        private void GetAndDrawBooks()
+        {
+            var books = bookRepository.GetAll();
+            DrawBooks(books);
+        }
     }
 }

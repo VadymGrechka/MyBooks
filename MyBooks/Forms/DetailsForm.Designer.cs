@@ -1,4 +1,4 @@
-﻿namespace addForm.Forms
+﻿namespace MyBooks.Forms
 {
     partial class DetailsForm
     {
@@ -99,7 +99,7 @@
             this.saveBookButton.Name = "saveBookButton";
             this.saveBookButton.Size = new System.Drawing.Size(93, 23);
             this.saveBookButton.TabIndex = 3;
-            this.saveBookButton.Text = "Сохранить";
+            this.saveBookButton.Text = "0";
             this.saveBookButton.UseVisualStyleBackColor = true;
             this.saveBookButton.Click += new System.EventHandler(this.saveBookButton_Click);
             // 

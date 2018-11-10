@@ -1,4 +1,5 @@
 ﻿using MyBooks.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlServerCe;
 
@@ -41,13 +42,15 @@ namespace MyBooks.Data
         public void Create(Book entry)
         {
             const string commandText = @"INSERT INTO Book (Name, Author, Description, DateCreated) VALUES 
-                                        (@Name, @Author, @Description, @DateStart)";
+                                        (@Name, @Author, @Description, @DateCreated)";
 
             using (var connection = GetOpenConnection())
             {
                 var command = new SqlCeCommand(commandText, connection);
-                command.Parameters.AddWithValue("@Name", Book.Name); (command, entry);
-
+                command.Parameters.AddWithValue("@Name", entry.Name);
+                command.Parameters.AddWithValue("@Author", entry.Author);
+                command.Parameters.AddWithValue("@Description", entry.Description);
+                command.Parameters.AddWithValue("@DateCreated", DateTime.UtcNow);
                 command.ExecuteNonQuery();
             }
         }
