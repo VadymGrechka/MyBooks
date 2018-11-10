@@ -39,6 +39,7 @@ namespace MyBooks.Data
                 DateCreated = reader.GetDateTime(4)
             };
         }
+
         public void Create(Book entry)
         {
             const string commandText = @"INSERT INTO Book (Name, Author, Description, DateCreated) VALUES 
@@ -51,6 +52,19 @@ namespace MyBooks.Data
                 command.Parameters.AddWithValue("@Author", entry.Author);
                 command.Parameters.AddWithValue("@Description", entry.Description);
                 command.Parameters.AddWithValue("@DateCreated", DateTime.UtcNow);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void Delete(int id)
+        {
+            string commandText = @"DELETE FROM Book WHERE Id = @Id;";
+
+            using (var connection = GetOpenConnection())
+            {
+                var command = new SqlCeCommand(commandText, connection);
+                command.Parameters.AddWithValue("@Id", id);
+
                 command.ExecuteNonQuery();
             }
         }

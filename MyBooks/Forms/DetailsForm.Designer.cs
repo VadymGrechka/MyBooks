@@ -31,7 +31,6 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.autorTextBox = new System.Windows.Forms.TextBox();
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.dateStartPicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,13 +57,6 @@
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(435, 22);
             this.descriptionTextBox.TabIndex = 0;
-            // 
-            // dateStartPicker
-            // 
-            this.dateStartPicker.Location = new System.Drawing.Point(24, 251);
-            this.dateStartPicker.Name = "dateStartPicker";
-            this.dateStartPicker.Size = new System.Drawing.Size(200, 22);
-            this.dateStartPicker.TabIndex = 1;
             // 
             // label1
             // 
@@ -95,11 +87,11 @@
             // 
             // saveBookButton
             // 
-            this.saveBookButton.Location = new System.Drawing.Point(321, 251);
+            this.saveBookButton.Location = new System.Drawing.Point(189, 249);
             this.saveBookButton.Name = "saveBookButton";
             this.saveBookButton.Size = new System.Drawing.Size(93, 23);
             this.saveBookButton.TabIndex = 3;
-            this.saveBookButton.Text = "0";
+            this.saveBookButton.Text = "Сохранить";
             this.saveBookButton.UseVisualStyleBackColor = true;
             this.saveBookButton.Click += new System.EventHandler(this.saveBookButton_Click);
             // 
@@ -112,7 +104,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateStartPicker);
             this.Controls.Add(this.descriptionTextBox);
             this.Controls.Add(this.autorTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -128,7 +119,6 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox autorTextBox;
         private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.DateTimePicker dateStartPicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

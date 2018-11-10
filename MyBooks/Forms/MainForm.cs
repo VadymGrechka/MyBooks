@@ -41,14 +41,27 @@ namespace MyBooks
         {
             DetailsForm addBookForm = new DetailsForm();
             if (addBookForm.ShowDialog() == DialogResult.OK)
-               GetAndDrawBooks();
+                GetAndDrawBooks();
         }
-       
+
 
         private void GetAndDrawBooks()
         {
             var books = bookRepository.GetAll();
             DrawBooks(books);
+        }
+
+        private void deleteBookMenuItem_Click(object sender, EventArgs e)
+        {
+            if (booksListView.SelectedItems == null && booksListView.SelectedItems.Count == 0)
+                return;
+
+            if (MessageBox.Show("Вы точно хотите удалить?", "Удаление", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                var id = Convert.ToInt32(booksListView.SelectedItems[0].Tag);
+                bookRepository.Delete(id);
+                GetAndDrawBooks();
+            }
         }
     }
 }
