@@ -1,6 +1,6 @@
-﻿namespace MyBooks.Forms
+﻿namespace addForm.Forms
 {
-    partial class AddForm
+    partial class DetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,43 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.autorTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.dateStartPicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.saveBookButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(24, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(435, 22);
-            this.textBox1.TabIndex = 0;
+            this.nameTextBox.Location = new System.Drawing.Point(24, 53);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(435, 22);
+            this.nameTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // autorTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(24, 122);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(435, 22);
-            this.textBox2.TabIndex = 0;
+            this.autorTextBox.Location = new System.Drawing.Point(24, 122);
+            this.autorTextBox.Name = "autorTextBox";
+            this.autorTextBox.Size = new System.Drawing.Size(435, 22);
+            this.autorTextBox.TabIndex = 0;
             // 
-            // textBox3
+            // descriptionTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(24, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(435, 22);
-            this.textBox3.TabIndex = 0;
+            this.descriptionTextBox.Location = new System.Drawing.Point(24, 194);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(435, 22);
+            this.descriptionTextBox.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dateStartPicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(24, 251);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dateStartPicker.Location = new System.Drawing.Point(24, 251);
+            this.dateStartPicker.Name = "dateStartPicker";
+            this.dateStartPicker.Size = new System.Drawing.Size(200, 22);
+            this.dateStartPicker.TabIndex = 1;
             // 
             // label1
             // 
@@ -103,7 +103,7 @@
             this.saveBookButton.UseVisualStyleBackColor = true;
             this.saveBookButton.Click += new System.EventHandler(this.saveBookButton_Click);
             // 
-            // AddForm
+            // DetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,11 +112,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "AddForm";
+            this.Controls.Add(this.dateStartPicker);
+            this.Controls.Add(this.descriptionTextBox);
+            this.Controls.Add(this.autorTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Name = "DetailsForm";
             this.Text = "Дбавление новой книги";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,10 +125,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox autorTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.DateTimePicker dateStartPicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

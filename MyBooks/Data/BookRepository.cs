@@ -38,5 +38,18 @@ namespace MyBooks.Data
                 DateCreated = reader.GetDateTime(4)
             };
         }
+        public void Create(Book entry)
+        {
+            const string commandText = @"INSERT INTO Book (Name, Author, Description, DateCreated) VALUES 
+                                        (@Name, @Author, @Description, @DateStart)";
+
+            using (var connection = GetOpenConnection())
+            {
+                var command = new SqlCeCommand(commandText, connection);
+                command.Parameters.AddWithValue("@Name", Book.Name); (command, entry);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
