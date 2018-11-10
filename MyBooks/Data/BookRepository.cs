@@ -68,5 +68,22 @@ namespace MyBooks.Data
                 command.ExecuteNonQuery();
             }
         }
+
+        public void Update(Book book)
+        {
+            const string commandText = @"UPDATE Catalog SET 
+                                        Name = @Name, Author = @Author, Description = @Description 
+                                        WHERE Id = @Id;";
+
+            using (var connection = GetOpenConnection())
+            {
+                var command = new SqlCeCommand(commandText, connection);
+                command.Parameters.AddWithValue("@Name", book.Name);
+                command.Parameters.AddWithValue("@Author", book.Author);
+                command.Parameters.AddWithValue("@Description", book.Description);
+
+                command.ExecuteNonQuery();
+            }
+        }
     }
 }
